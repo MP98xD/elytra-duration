@@ -1,9 +1,11 @@
-# Fabric Example Mod
+# Elytra Duration
 
 ## Setup
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+- Download and install the Fabric Mod Loader
+- Copy Fabric API to the `mods` folder inside minecraft installation path
+- Copy this the release `.jar` to the same `mods` folder
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+MIT License

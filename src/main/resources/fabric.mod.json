@@ -1,29 +1,25 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "elytraduration",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Elytra Duration Mod",
+  "description": "MC Fabric mod for displaying the elytra duration when equipped",
   "authors": [
-    "Me!"
+    "MP98xD"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/elytra-duration-mod-fabric",
+    "sources": "https://github.com/MP98xD/elytra-duration"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/elytraduration/icon.png",
 
   "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
-    ]
-  },
+  "entrypoints": {},
   "mixins": [
-    "modid.mixins.json"
+    "elytraduration.mixins.json"
   ],
 
   "depends": {
