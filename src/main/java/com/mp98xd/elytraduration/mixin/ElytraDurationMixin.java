@@ -2,6 +2,7 @@ package com.mp98xd.elytraduration.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
+import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
@@ -18,12 +19,12 @@ public abstract class ElytraDurationMixin {
 	private final TextRenderer fontRenderer = this.client.textRenderer;
 
 	@Inject(at = @At("HEAD"), method = "render")
-	public void renderDurability(MatrixStack matrices, float tickDelta, CallbackInfo info) {
+	public void renderDurability(DrawContext context, float tickDelta, CallbackInfo info) {
 		if (!this.client.options.hudHidden && this.client.player != null) {
 			ItemStack chestplate = this.client.player.getInventory().getArmorStack(2);
 
 			if (chestplate.getItem().equals(Items.ELYTRA)) {
-				this.fontRenderer.drawWithShadow(matrices, String.valueOf(chestplate.getMaxDamage() - chestplate.getDamage()), 0, 0, 14737632);
+				context.drawTextWithShadow(this.fontRenderer, String.valueOf(chestplate.getMaxDamage() - chestplate.getDamage()), 0, 0, 14737632);
 			}
 		}
 	}
